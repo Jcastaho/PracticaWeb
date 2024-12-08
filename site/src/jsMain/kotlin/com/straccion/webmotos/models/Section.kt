@@ -7,13 +7,13 @@ enum class Section(
     val path: String
 ) {
     Home(
-        id = "Inicio",
+        id = "home",
         title = "Inicio",
         subtitle = "",
         path = "#home"
     ),
     About(
-        id = "Acerca de mí",
+        id = "about",
         title = "Acerca de mí",
         subtitle = "¿Por qué contratarme?",
         path = "#about"

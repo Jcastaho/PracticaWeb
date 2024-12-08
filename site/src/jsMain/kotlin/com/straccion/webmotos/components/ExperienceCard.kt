@@ -90,7 +90,7 @@ fun ExperienceDetails(
         modifier = Modifier
             .fillMaxWidth()
             .margin(left = if (breakpoint >= Breakpoint.MD) 14.px else 0.px),
-        verticalAlignment = Alignment.CenterVertically
+        verticalAlignment = Alignment.CenterVertically,
     ) {
         if (breakpoint >= Breakpoint.MD) {
             ExperienceNumber(
@@ -100,7 +100,7 @@ fun ExperienceDetails(
         }
         Column(
             modifier = Modifier
-                .margin(left = if(breakpoint <= Breakpoint.SM) 10.px else animatedMargin)
+                .margin(left = if (breakpoint <= Breakpoint.SM) 10.px else animatedMargin)
                 .fillMaxSize()
                 .transition(
                     Transition.Companion.of("margin", 500.ms, delay = experience.ordinal * 150.ms)
@@ -178,11 +178,14 @@ fun ExperienceNumber(
         ) {
             P(
                 attrs = Modifier
+                    .padding(0.px) // Sin relleno
+                    .margin(0.px) // Sin márgenes
                     .fontFamily(FONT_FAMILY)
                     .fontSize(16.px)
                     .fontWeight(FontWeight.Bold)
-                    .color(if (active) Colors.White else Theme.Secondary.rgb)
-                    .toAttrs()
+                    .color(if (active) Colors.White else Theme.Primary.rgb)
+                    .toAttrs(),
+
             ) {
                 Text(experience.number)
             }
