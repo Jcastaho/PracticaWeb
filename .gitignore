@@ -8,6 +8,10 @@ kotlin-js-store
 *.iml
 /*.ipr
 
+!.kobweb/conf.yaml
+!.kobweb/site
+
+
 /.idea/caches
 /.idea/libraries
 /.idea/modules.xml
